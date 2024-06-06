@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Gestion de 1X10</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  	<link href="../lib/icon-font-google/material-icons.css" rel="stylesheet"/>
+  	<link rel="stylesheet" href="../lib/normalize.min.css">
+	<link rel='stylesheet' href='../lib/materialize.min.css'>
+	
+	
+	<link rel="stylesheet" href="./dashboard.css">
+		
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header>
+	<nav class="red accent-4">
+		<div class="nav-wrapper">
+			<div class="row">
+				<div class="col s12">
+					<a id="burger-icon-1" href="#" data-target="sidebar-1" class="left sidenav-trigger show-on-medium"><i class="material-icons">menu</i></a>
+					
+					<a class="brand-logo">1X10</a>
+					<ul id="nav-mobile" class="right hide-on-med-and-down">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+
+
+<!-- SIDEBAR 1 - HAS .SIDENAV-FIXED -->
+<ul id="sidebar-1" class="sidenav sidenav-fixed">
+	<li>
+		<div class="user-view">
+			<div class="background">
+				<img src="../image/images.jpeg" width="100%">
+			</div>
+			<a href="#!user"><img class="circle" src="../image/logopsuv.jpg"></a>
+			<a href="#!name"><span id="users" class="white-text name"></span></a>
+		</div>
+	</li>
+	<li><a href="#" id="menu-roles">Roles</a></li>
+	<li><a href="#" id="menu-permisos">Permisos</a></li>
+	<li><a href="#" id="menu-perfiles">Perfiles</a></li>
+	<li><a href="#" id="menu-organizacion">Organizacion</a></li>
+	<li><a href="#" id="menu-orgnivel">Niveles de Organizacion</a></li>
+	<li><a href="#" id="menu-secretaria">Secretarias</a></li>
+	<li><a href="#" id="menu-institucion">Instituciones</a></li>
+	<li><a href="#" id="menu-cargo">Cargos</a></li>
+	<li><a href="#" id="menu-politica">Responsabilidad Politica</a></li>
+	<li><a href="#" id="menu-funcionario">Clase Obrera</a></li>
+	<li><a href="#" id="menu-acta">Usuarios</a></li>
+	<li><a href="#" id="menu-acta">1X10</a></li>
+</ul>
+
+<main id="main">
+	<div class="container">
+		<h1 class="center">Registro y Actualizacion</h1>
+		<p class="flow-text">Sistema de Gestion del 1x10 Institucional de la Gebernacion del Estado Monagas</p>
+		<p>
+			
+		</p>
+				
+	</div>
+</main>
+
+<main id="main-roles">
+	<div class="container">
+        <div class="row">
+            <div class="col s12 m12">
+                            
+                <div class="row">
+                    <div class="col s12">
+                      <table id="roles-table">
+                        <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>Nombre del Rol</th>
+                              <th>Descripción</th>
+                              <th>Acciones</th>
+                          </tr>
+                        </thead>
+                
+                        <tbody id="roles-tbody">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red modal-trigger" href="#modal-roles">
+          <i class="large material-icons">add</i>
+        </a>
+    </div>
+     <!-- Modal Structure -->
+  <div id="modal-roles" class="modal">
+    <div class="modal-content">
+      <h4>Gestion de Roles</h4>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="id_roles" type="text" class="validate">
+            <label for="id_roles">ID Roles</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="nombre_roles" type="text" class="validate">
+            <label for="nombre_roles">Nombre</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="descripcion_roles" type="text" class="validate">
+            <label for="descripcion_roles">Descripción</label>
+          </div>
+        </div>        
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="editar_roles" class="modal-close waves-effect waves-light red btn-small">Actualizar</a>
+      <a href="#!" id="agregar_roles" class="modal-close waves-effect waves-light red btn-small">Agregar</a>
+    </div>
+  </div>
+</main>
+
+
+<main id="main-permisos">
+	<div class="container">
+        <div class="row">
+            <div class="col s12 m12">
+                            
+                <div class="row">
+                    <div class="col s12">
+                      <table id="permisos-table">
+                        <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>Permisos</th>
+                              <th>Descripción</th>
+                              <th>Acciones</th>
+                          </tr>
+                        </thead>
+                
+                        <tbody id="permisos-tbody">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red modal-trigger" href="#modal-permiso">
+          <i class="large material-icons">add</i>
+        </a>
+    </div>
+     <!-- Modal Structure -->
+  <div id="modal-permiso" class="modal">
+    <div class="modal-content">
+      <h4>Gestion de Roles</h4>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="id_permiso" type="text" class="validate">
+            <label for="id_permiso">ID Permiso</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="nombre_permiso" type="text" class="validate">
+            <label for="nombre_permiso">Nombre</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="descripcion_permiso" type="text" class="validate">
+            <label for="descripcion_permiso">Descripción</label>
+          </div>
+        </div>        
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="editar_permiso" class="modal-close waves-effect waves-light red btn-small">Actualizar</a>
+      <a href="#!" id="agregar_permiso" class="modal-close waves-effect waves-light red btn-small">Agregar</a>
+    </div>
+  </div>
+</main>
+
+<main id="main-organizacion">
+	<div class="container">
+        <div class="row">
+            <div class="col s12 m12">
+                            
+                <div class="row">
+                    <div class="col s12">
+                      <table id="organizacion-table">
+                        <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>Organizacion</th>
+                              <th>Acciones</th>
+                          </tr>
+                        </thead>
+                
+                        <tbody id="organizacion-tbody">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red modal-trigger" href="#modal-organizacion">
+          <i class="large material-icons">add</i>
+        </a>
+    </div>
+     <!-- Modal Structure -->
+  <div id="modal-organizacion" class="modal">
+    <div class="modal-content">
+      <h4>Gestion de Organizaciones</h4>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="id_organizacion" type="text" class="validate">
+            <label for="id_organizacion">ID Organizacion</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="nombre_organizacion" type="text" class="validate">
+            <label for="nombre_organizacion">Nombre</label>
+          </div>          
+        </div>        
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="editar_organizacion" class="modal-close waves-effect waves-light red btn-small">Actualizar</a>
+      <a href="#!" id="agregar_organizacion" class="modal-close waves-effect waves-light red btn-small">Agregar</a>
+    </div>
+  </div>
+</main>
+
+<main id="main-perfiles">
+	<div class="container">
+        <div class="row">
+            <div class="col s12 m12">
+                            
+                <div class="row">
+                    <div class="col s12">
+                      <table id="perfiles-table">
+                        <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>Organizacion</th>
+                              <th>Acciones</th>
+                          </tr>
+                        </thead>
+                
+                        <tbody id="perfiles-tbody">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red modal-trigger" href="#modal-perfiles">
+          <i class="large material-icons">add</i>
+        </a>
+    </div>
+     <!-- Modal Structure -->
+  <div id="modal-perfiles" class="modal">
+    <div class="modal-content">
+      <h4>Gestion de Perfiles</h4>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="id_perfiles" type="text" class="validate">
+            <label for="id_perfiles">ID Perfiles</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="nombre_perfiles" type="text" class="validate">
+            <label for="nombre_perfiles">Nombre</label>
+          </div>          
+        </div>        
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="editar_perfiles" class="modal-close waves-effect waves-light red btn-small">Actualizar</a>
+      <a href="#!" id="agregar_perfiles" class="modal-close waves-effect waves-light red btn-small">Agregar</a>
+    </div>
+  </div>
+</main>
+
+<main id="main-orgnivel">
+	<div class="container">
+        <div class="row">
+            <div class="col s12 m12">
+                            
+                <div class="row">
+                    <div class="col s12">
+                      <table id="orgnivel-table">
+                        <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>Organizacion</th>
+                              <th>Nivel Organizacion</th>
+                              <th>Acciones</th>
+                          </tr>
+                        </thead>
+                
+                        <tbody id="orgnivel-tbody">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red modal-trigger" href="#modal-orgnivel">
+          <i class="large material-icons">add</i>
+        </a>
+    </div>
+     <!-- Modal Structure -->
+  <div id="modal-orgnivel" class="modal">
+    <div class="modal-content">
+      <h4>Gestion de Nives de Organización</h4>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="id_orgnivel" type="text" class="validate">
+            <label for="id_orgnivel">ID Nivel Organizativo</label>
+          </div>
+          <div class="input-field col s12">
+            <select id="select-organizacion">
+              
+            </select>
+            <label>Organización:</label>
+          </div>          
+          <div class="input-field col s12">
+            <input id="nombre_orgnivel" type="text" class="validate">
+            <label for="nombre_orgnivel">Nombre</label>
+          </div>          
+        </div>        
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="editar_orgnivel" class="modal-close waves-effect waves-light red btn-small">Actualizar</a>
+      <a href="#!" id="agregar_orgnivel" class="modal-close waves-effect waves-light red btn-small">Agregar</a>
+    </div>
+  </div>
+</main>
+
+<main id="main-secretaria">
+	<div class="container">
+        <div class="row">
+            <div class="col s12 m12">
+                            
+                <div class="row">
+                    <div class="col s12">
+                      <table id="secretaria-table">
+                        <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>Organizacion</th>
+                              <th>Secretaria</th>
+                              <th>Acciones</th>
+                          </tr>
+                        </thead>
+                
+                        <tbody id="secretaria-tbody">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red modal-trigger" href="#modal-secretaria">
+          <i class="large material-icons">add</i>
+        </a>
+    </div>
+     <!-- Modal Structure -->
+  <div id="modal-secretaria" class="modal">
+    <div class="modal-content">
+      <h4>Gestion de Secretarias</h4>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="id_secretaria" type="text" class="validate">
+            <label for="id_secretaria">ID Secretaria</label>
+          </div>
+          <div class="input-field col s12">
+            <select id="select-secretaria">
+              
+            </select>
+            <label>Nivel Organizativo:</label>
+          </div>          
+          <div class="input-field col s12">
+            <input id="nombre_secretaria" type="text" class="validate">
+            <label for="nombre_secretaria">Nombre</label>
+          </div>          
+        </div>        
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="editar_secretaria" class="modal-close waves-effect waves-light red btn-small">Actualizar</a>
+      <a href="#!" id="agregar_secretaria" class="modal-close waves-effect waves-light red btn-small">Agregar</a>
+    </div>
+  </div>
+</main>
+
+
+<main id="main-institucion">
+	<div class="container">
+        <div class="row">
+            <div class="col s12 m12">
+                            
+                <div class="row">
+                    <div class="col s12">
+                      <table id="institucion-table">
+                        <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>Organizacion</th>
+                              <th>Nivel Organizacion</th>
+                              <th>Scretaria</th>
+                              <th>Institucion</th>
+                              <th>Acciones</th>
+                          </tr>
+                        </thead>
+                
+                        <tbody id="institucion-tbody">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red modal-trigger" href="#modal-institucion">
+          <i class="large material-icons">add</i>
+        </a>
+    </div>
+     <!-- Modal Structure -->
+  <div id="modal-institucion" class="modal">
+    <div class="modal-content">
+      <h4>Gestion de Instituciones</h4>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="id_institucion" type="text" class="validate">
+            <label for="id_institucion">ID Institución</label>
+          </div>
+          <div class="input-field col s12">
+            <select id="select-organizacion1">
+              
+            </select>
+            <label>Organización:</label>
+          </div>
+          <div class="input-field col s12">
+            <select id="select-nivel">
+              
+            </select>
+            <label>Nivel Organizativo:</label>
+          </div>
+          <div class="input-field col s12">
+            <select id="select-secretaria1">
+              
+            </select>
+            <label>Nivel Secretaria:</label>
+          </div>    
+          
+
+          <div class="input-field col s12">
+            <input id="nombre_institucion" type="text" class="validate">
+            <label for="nombre_institucion">Institución</label>
+          </div>          
+        </div>        
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="editar_institucion" class="modal-close waves-effect waves-light red btn-small">Actualizar</a>
+      <a href="#!" id="agregar_institucion" class="modal-close waves-effect waves-light red btn-small">Agregar</a>
+    </div>
+  </div>
+</main>
+
+
+<main id="main-cargo">
+	<div class="container">
+        <div class="row">
+            <div class="col s12 m12">
+                            
+                <div class="row">
+                    <div class="col s12">
+                      <table id="cargo-table">
+                        <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>Cargo</th>
+                              <th>descripción Cargo</th>                              
+                              <th>Acciones</th>
+                          </tr>
+                        </thead>
+                
+                        <tbody id="cargo-tbody">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red modal-trigger" href="#modal-cargo">
+          <i class="large material-icons">add</i>
+        </a>
+    </div>
+     <!-- Modal Structure -->
+  <div id="modal-cargo" class="modal">
+    <div class="modal-content">
+      <h4>Gestion de Cargos</h4>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="id_cargo" type="text" class="validate">
+            <label for="id_cargo">ID Institución</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="nombre_cargo" type="text" class="validate">
+            <label for="nombre_cargo">Cargo</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="descripcion_cargo" type="text" class="validate">
+            <label for="descripcion_cargo">Descripcion Cargo</label>
+          </div>         
+        </div>        
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="editar_cargo" class="modal-close waves-effect waves-light red btn-small">Actualizar</a>
+      <a href="#!" id="agregar_cargo" class="modal-close waves-effect waves-light red btn-small">Agregar</a>
+    </div>
+  </div>
+</main>
+
+<main id="main-politica">
+	<div class="container">
+        <div class="row">
+            <div class="col s12 m12">
+                            
+                <div class="row">
+                    <div class="col s12">
+                      <table id="politica-table">
+                        <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>Responsabilidad Politica</th>
+                              <th>descripción Responsabilidad</th>                              
+                              <th>Acciones</th>
+                          </tr>
+                        </thead>
+                
+                        <tbody id="politica-tbody">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red modal-trigger" href="#modal-politica">
+          <i class="large material-icons">add</i>
+        </a>
+    </div>
+     <!-- Modal Structure -->
+  <div id="modal-politica" class="modal">
+    <div class="modal-content">
+      <h4>Gestion de Responsabilidades Politicas</h4>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="id_politica" type="text" class="validate">
+            <label for="id_politica">ID Responsabilidades</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="nombre_politica" type="text" class="validate">
+            <label for="nombre_politica">Responsabilidades Politicas</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="descripcion_politica" type="text" class="validate">
+            <label for="descripcion_politica">Descripcion Responsabilidad</label>
+          </div>         
+        </div>        
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="editar_politica" class="modal-close waves-effect waves-light red btn-small">Actualizar</a>
+      <a href="#!" id="agregar_politica" class="modal-close waves-effect waves-light red btn-small">Agregar</a>
+    </div>
+  </div>
+</main>
+
+
+<main id="main-funcionario">
+  <div class="container">
+    <div class="row" id="card-institucion">
+      
+    </div>
+  </div>
+	<div class="container" id="crud-funcionario">
+        <div class="row">
+            <div class="col s12 m12">
+                            
+                <div class="row">
+                    <div class="col s12">
+                      <table>
+                        <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>Cedula</th>
+                              <th>Cargo</th>
+                              <th>Nombre</th>
+                              <th>Apellido</th>
+                              <th>Telefono</th>                              
+                              <th>Acciones</th>
+                          </tr>
+                        </thead>
+                
+                        <tbody id="funcionario-tbody">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                </div>               
+            </div>
+        </div>
+  </div>
+  <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red modal-trigger" href="#modal-funcionario">
+          <i class="large material-icons">add</i>
+        </a>
+  </div>
+     <!-- Modal Structure -->
+  <div id="modal-funcionario" class="modal">
+    <div class="modal-content">
+      <h4>Gestion de Funcionarios:</h4>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <input id="id_funcionario2" type="number" class="validate">
+            <label for="id_funcionario2">ID Funcionario</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="cedula2" type="number" class="validate">
+            <label for="cedula2">Cédula</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <select id="id_institucion2">
+              
+            </select>
+            <label>Institucion:</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <select id="id_cargo2">
+              
+            </select>
+            <label>Cargo:</label>
+          </div>         
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <select id="id_politica2">
+              
+            </select>
+            <label>Cargo:</label>
+          </div>           
+          <div class="input-field col s12 m6">
+            <input id="primer_nombre2" type="text" class="validate">
+            <label for="primer_nombre2">Primer Nombre</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <input id="segundo_nombre2" type="text" class="validate">
+            <label for="segundo_nombre2">Segundo Nombre</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="primer_apellido2" type="text" class="validate">
+            <label for="primer_apellido2">Primer Apellido</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <input id="segundo_apellido2" type="text" class="validate">
+            <label for="segundo_apellido2">Segundo Apellido</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="email2" type="email" class="validate">
+            <label for="email2">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <input id="telefono_mobil2" type="text" class="validate">
+            <label for="telefono_mobil2">Teléfono Móvil</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="whatsapp2" type="text" class="validate">
+            <label for="whatsapp2">Whatsapp</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <input id="telegram2" type="text" class="validate">
+            <label for="telegram2">Telegram</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <select id="id_estado1">
+              
+            </select>
+            <label>Estado:</label>
+          </div>           
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <select id="id_municipio1">
+              
+            </select>
+            <label>Municipio:</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <select id="id_ciudad1">
+              
+            </select>
+            <label>Ciudad:</label>
+          </div>          
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <select id="id_parroquia1">
+              
+            </select>
+            <label>Parroquia:</label>
+          </div>         
+          <div class="input-field col s12 m6">
+            <input id="edificio2" type="text" class="validate">
+            <label for="edificio2">Edificio</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <input id="piso2" type="text" class="validate">
+            <label for="piso2">Piso</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="apartamento2" type="text" class="validate">
+            <label for="apartamento2">Apartamento</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <input id="urbanismo2" type="text" class="validate">
+            <label for="urbanismo2">Urbanismo</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="calle2" type="text" class="validate">
+            <label for="calle2">Calle</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <input id="casa2" type="text" class="validate">
+            <label for="casa2">Casa</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="punto_referencia2" type="text" class="validate">
+            <label for="punto_referencia2">Punto de Referencia</label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="editar_funcionario" class="modal-close waves-effect waves-light red btn-small">Actualizar</a>
+      <a href="#!" id="agregar_funcionario" class="modal-close waves-effect waves-light red btn-small">Agregar</a>
+    </div>
+  </div>
+
+</main>
+
+
+
+    <script src='../lib/jquery.min.js'></script>
+    <script src='../lib/materialize.min.js'></script>	
+    <script src="./dashboard.js"></script>	
+    <script type="module" src="./roles/roles.js"></script>
+    <script type="module" src="./permisos/permisos.js"></script>
+    <script type="module" src="./organizacion/organizacion.js"></script>
+    <script type="module" src="./perfiles/perfiles.js"></script>
+    <script type="module" src="./orgnivel/orgnivel.js"></script>
+    <script type="module" src="./secretaria/secretaria.js"></script>
+    <script type="module" src="./instituciones/instituciones.js"></script>
+    <script type="module" src="./cargos/cargos.js"></script>
+    <script type="module" src="./politica/politica.js"></script>
+    <script type="module" src="./funcionarios/funcionario.js"></script>
+
+</body>
+</html>

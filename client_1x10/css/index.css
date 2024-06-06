@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    background-image: url("../image/Sistema-Integral-Comunal-Background.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+}
+.context-left{
+    /*position: absolute;*/    
+    width: 60% !important;
+    float: left;
+}
+.context-right{
+    /*position: absolute;*/    
+    width: 40%  !important;
+    float: right;
+}
+.login-presenter{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.rounded{
+    border-radius: 60px;
+}
+
+/* label color */
+.input-field label {
+    color: #d50000 !important;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: #d50000 !important;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #d50000 !important;
+    box-shadow: 0 1px 0 0 #d50000 !important;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #d50000;
+    box-shadow: 0 1px 0 0 #d50000;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid #d50000;
+    box-shadow: 0 1px 0 0 #d50000;
+  }
+
+   /* label focus color */
+   .input-field input[type=password]:focus + label {
+    color: #d50000 !important;
+  }
+  /* label underline focus color */
+  .input-field input[type=password]:focus {
+    border-bottom: 1px solid #d50000 !important;
+    box-shadow: 0 1px 0 0 #d50000 !important;
+  }
+  /* valid color */
+  .input-field input[type=password].valid {
+    border-bottom: 1px solid #d50000;
+    box-shadow: 0 1px 0 0 #d50000;
+  }
+  /* invalid color */
+  .input-field input[type=password].invalid {
+    border-bottom: 1px solid #d50000;
+    box-shadow: 0 1px 0 0 #d50000;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #d50000 !important;
+  }
+       
+
+@media (max-width: 768px) {
+    .context-left {
+        display: none;
+    }
+    .context-right{
+        width: 100% !important;
+    }
+}
